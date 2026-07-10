@@ -1,0 +1,4 @@
+config,backend,sigma_ci,c1,E_mit_gen,E_mit_garb,rho_gen,rho_garb,genuine_improvement_pp,genuine_cohen_d,genuine_p,genuine_frac_better,garbage_improvement_pp,garbage_cohen_d,garbage_p,garbage_frac_better,variance_ratio,sum_ci_sq
+Kim,aer_simulator,3.5,1.875,0.660847,0.731534,0.4378,0.5562,26.100,14.165,1.70e-231,1.000,33.376,21.163,4.46e-266,1.000,3.93,5.22
+Hour,aer_simulator,49.0,10.000,0.882039,3.845567,0.8082,5.7706,44.438,3.195,1.38e-106,1.000,60.079,91.670,0.00e+00,1.000,669.49,741.00
+Kandala,aer_simulator,681.0,165.000,3.982845,66.263552,6.0004,110.2880,47.239,1.485,2.24e-52,0.875,60.032,79.048,0.00e+00,1.000,147932.13,156613.50

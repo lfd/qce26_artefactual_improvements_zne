@@ -1,0 +1,17 @@
+{
+  "tc1": {
+    "rho_genu": 0.9072,
+    "rho_garb": 3.3547,
+    "E_ideal": 0.99501
+  },
+  "tc3": {
+    "rho_genu": 1.544,
+    "rho_garb": 1.3149,
+    "E_ideal": 0.956018
+  },
+  "tc5": {
+    "rho_genu": 0.9065,
+    "rho_garb": 0.8343,
+    "E_ideal": 0.882777
+  }
+}

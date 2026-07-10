@@ -1,0 +1,2 @@
+circuit,backend,n_qubits,n_cx,observable,E_ideal,noise_floor,E1,E3,E5,E1_garb,E3_garb,E5_garb,E_mit_gen,E_mit_garb,rho_gen,rho_garb
+QExa hardware,EQE1,4,6,ZZZZ,0.9812,0.0,0.290,0.024,-0.105,NA,NA,NA,0.4744,NA,0.2668,NA

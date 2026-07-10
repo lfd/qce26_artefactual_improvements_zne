@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-06-21T07:14:22.784768+00:00",
+  "chain4": {
+    "layout": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "source": "live:default",
+    "n": 4
+  },
+  "chain5": {
+    "layout": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "live:default",
+    "n": 5
+  },
+  "chain4_connected": true,
+  "chain5_connected": true,
+  "ping_E_lambda1": 0.8008
+}

@@ -1,0 +1,16 @@
+{
+  "backend": "EQE1",
+  "metric": "E_A - E_B (pure bias)",
+  "blocked_mean_delta": -0.0005,
+  "blocked_std_delta": 0.01746,
+  "blocked_abs_mean_delta": 0.01404,
+  "blocked_blockmean_A": 0.75738,
+  "blocked_blockmean_B": 0.75788,
+  "blocked_blockbias": -0.0005,
+  "interleaved_mean_delta": -0.00135,
+  "interleaved_std_delta": 0.01273,
+  "interleaved_abs_mean_delta": 0.0097,
+  "interleaved_blockmean_A": 0.75924,
+  "interleaved_blockmean_B": 0.76059,
+  "interleaved_blockbias": -0.00135
+}

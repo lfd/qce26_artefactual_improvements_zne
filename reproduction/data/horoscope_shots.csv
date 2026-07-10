@@ -1,0 +1,5 @@
+strategy,backend,mean_raw,mean_mit,std_mit,t_stat,p_value,cohen_d,frac_better_pct
+genuine_richardson,aer_simulator,0.430269,0.702137,0.014256,243.21,3.41e-248,17.20,100.0
+genuine_linear,aer_simulator,0.430269,0.484579,0.008499,67.37,6.04e-139,4.76,100.0
+garbage_richardson,aer_simulator,0.430269,0.794790,0.015927,281.37,9.40e-261,19.90,100.0
+garbage_linear,aer_simulator,0.430269,0.466015,0.008924,40.84,1.09e-98,2.89,100.0

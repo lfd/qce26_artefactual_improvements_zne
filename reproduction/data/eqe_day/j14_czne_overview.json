@@ -1,0 +1,20 @@
+{
+  "retained": {
+    "E_ideal": 0.99501,
+    "rho_genu": 0.6663,
+    "rho_iden": 0.5943,
+    "rho_garb": 2.5617
+  },
+  "mid": {
+    "E_ideal": 0.99024,
+    "rho_genu": 0.7544,
+    "rho_iden": 0.6111,
+    "rho_garb": 2.6154
+  },
+  "destroyed": {
+    "E_ideal": 0.981197,
+    "rho_genu": 0.8322,
+    "rho_iden": 0.7393,
+    "rho_garb": 2.6459
+  }
+}

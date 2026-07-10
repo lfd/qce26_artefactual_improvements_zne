@@ -1,0 +1,18 @@
+{
+  "backend": "EQE1",
+  "n_qubits": 4,
+  "E_ideal": 0.956018,
+  "sigma_ci": 3.5,
+  "scale_factors": "[1.0, 3.0, 5.0]",
+  "E_lambda1_genu": 0.589242,
+  "E_mit_genu": 1.155544,
+  "rho_genu": 1.544,
+  "neg_states_genu": 7,
+  "neg_pmin_genu": -0.137093,
+  "E_lambda1_garb": 0.585563,
+  "E_mit_garb": 1.072664,
+  "rho_garb": 1.3149,
+  "neg_states_garb": 11,
+  "neg_pmin_garb": -0.146792,
+  "delta_rho": 0.2291
+}

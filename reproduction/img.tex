@@ -1,0 +1,15 @@
+\PassOptionsToClass{conference}{IEEEtran}
+\documentclass[class=IEEEtran]{standalone} 
+% Match the paper's fonts: IEEEtran sets \rmdefault=ptm (Times), but under
+% lualatex the Times shape only resolves with T1 fontenc — otherwise text
+% falls back to Latin Modern and the figure fonts no longer match the paper.
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{angles, positioning, calc}
+
+\begin{document}
+  \input{\path}
+\end{document}
+
+

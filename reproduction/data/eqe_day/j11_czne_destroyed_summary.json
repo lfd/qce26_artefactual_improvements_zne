@@ -1,0 +1,23 @@
+{
+  "backend": "EQE1",
+  "n_qubits": 4,
+  "E_ideal": 0.981197,
+  "sigma_ci": 3.5,
+  "scale_factors": "[1.0, 3.0, 5.0]",
+  "E_lambda1_genu": 0.767253,
+  "E_mit_genu": 0.978707,
+  "rho_genu": 0.9884,
+  "neg_states_genu": 3,
+  "neg_pmin_genu": -0.025682,
+  "E_lambda1_garb": 0.751107,
+  "E_mit_garb": 1.384749,
+  "rho_garb": 2.7539,
+  "neg_states_garb": 10,
+  "neg_pmin_garb": -0.255334,
+  "E_lambda1_iden": 0.761426,
+  "E_mit_iden": 0.923173,
+  "rho_iden": 0.736,
+  "neg_states_iden": 2,
+  "neg_pmin_iden": -0.03137,
+  "delta_rho": -1.7655
+}

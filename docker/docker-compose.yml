@@ -1,0 +1,20 @@
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: amplification_error_repro
+    logging:
+      driver: "none"
+    volumes:
+      - ..:/amplification_error
+    working_dir: /amplification_error
+    stdin_open: true
+    tty: true
+
+  repro:
+    image: amplification_error_repro
+    volumes:
+      - ..:/amplification_error
+    working_dir: /amplification_error
+    command: make repro

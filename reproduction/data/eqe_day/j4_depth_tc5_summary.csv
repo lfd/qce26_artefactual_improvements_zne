@@ -1,0 +1,2 @@
+backend,n_qubits,E_ideal,sigma_ci,scale_factors,E_lambda1_genu,E_mit_genu,rho_genu,neg_states_genu,neg_pmin_genu,E_lambda1_garb,E_mit_garb,rho_garb,neg_states_garb,neg_pmin_garb,delta_rho
+EQE1,4,0.882777,3.5,"[1.0, 3.0, 5.0]",0.437484,0.841124,0.9065,7,-0.054407,0.439111,0.809281,0.8343,12,-0.093007,0.0722

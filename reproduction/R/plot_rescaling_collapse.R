@@ -51,7 +51,7 @@ for (tag in names(depths)) {
 }
 cat("Per-depth summary (genuine {1,3,5}):\n"); print(res)
 
-depth_cols <- c("d=1" = LFD$teal, "d=3" = LFD$orange, "d=5" = LFD$red)
+depth_cols <- c("d=1" = LFD$black, "d=3" = LFD$teal, "d=5" = LFD$orange)
 
 # ── Panel (a): E(lambda) collapse to the floor ──
 pa <- ggplot(curves, aes(scale_factor, E, colour = depth)) +
@@ -59,7 +59,7 @@ pa <- ggplot(curves, aes(scale_factor, E, colour = depth)) +
              linewidth = 0.4) +
   geom_line(linewidth = 0.5) +
   geom_point(size = 1.3) +
-  annotate("text", x = 5, y = 0.08, label = "floor $f=0$",
+  annotate("text", x = 4.8, y = 0.08, label = "floor $f=0$",
            hjust = 1, size = 2.4, colour = LFD$grey) +
   scale_colour_manual(values = depth_cols, name = NULL) +
   guides(colour = guide_legend(nrow = 1, keywidth = unit(2.2, "mm"),
@@ -69,8 +69,7 @@ pa <- ggplot(curves, aes(scale_factor, E, colour = depth)) +
                                                    colour = "black",
                                                    fill = unname(depth_cols)))) +
   scale_x_continuous(breaks = c(1, 3, 5), expand = expansion(mult = c(0.04, 0.1))) +
-  labs(x = "noise scale $\\lambda$", y = "$E(\\lambda)$",
-       title = "(a) depth destroys the signal") +
+  labs(x = "Noise Scale $\\lambda$", y = "$E(\\lambda)$") +
   theme_paper() + shrink_legend() +
   theme(plot.title = element_text(size = BASE.SIZE),
         legend.text = element_text(size = SMALL.SIZE - 1),
@@ -84,17 +83,16 @@ bars <- res %>%
                         levels = c("d=1", "d=3", "d=5")),
          quantity = factor(quantity,
                            levels = c("Richardson", "Rescaling", "Ideal")))
-qcols <- c(Richardson = LFD$teal, Rescaling = LFD$orange, Ideal = LFD$red)
+qcols <- c(Richardson = LFD$black, Rescaling = LFD$teal, Ideal = LFD$orange)
 pb <- ggplot(bars, aes(depth, value, fill = quantity)) +
   geom_col(position = position_dodge(width = 0.75), width = 0.68,
            colour = "black", linewidth = 0.2) +
   scale_fill_manual(
     values = qcols, name = NULL,
-    labels = c("Richardson", "rescaling", "ideal")) +
+    labels = c("Richardson", "Rescaling", "Ideal")) +
   guides(fill = guide_legend(nrow = 1, keywidth = unit(2.2, "mm"),
                              keyheight = unit(2.2, "mm"))) +
-  labs(x = "trotter depth", y = "$\\hat E(0)$",
-       title = "(b) $\\hat E(0)\\!\\to\\! 15/8\\,E(\\lambda_1)$") +
+  labs(x = "Trotter Depth", y = "$\\hat E(0)$") +
   theme_paper() + shrink_legend() +
   theme(plot.title = element_text(size = BASE.SIZE),
         legend.text = element_text(size = SMALL.SIZE - 1))

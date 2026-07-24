@@ -11,13 +11,16 @@
 \usepackage{multirow}
 \usepackage{xcolor}
 \usepackage[colorlinks=true,urlcolor=teal,
-            linkcolor=teal,citecolor=teal]{hyperref}\usepackage{cleveref}
+            linkcolor=teal,citecolor=teal]{hyperref}
+\usepackage{cleveref}
 \usepackage{balance}
 \usepackage{enumitem}
 \usepackage{url}
 \usepackage{csquotes}
 \usepackage{glossaries-extra}
 \usepackage{tikz}
+\usepackage{orcidlink}
+
 \usetikzlibrary{patterns,decorations.pathmorphing,calc,positioning}
 \setabbreviationstyle[acronym]{long-short}
 \glssetcategoryattribute{acronym}{nohyperfirst}{true}
@@ -108,7 +111,7 @@
 \title{Benchmarking Error Mitigation: Artefactual Improvements in Zero-Noise Extrapolation}
 
 \author{
-    \IEEEauthorblockN{\blackout{Dominik Köster}}
+    \IEEEauthorblockN{\blackout{Dominik Köster\orcidlink{0009-0001-0230-3123}}}
     \IEEEauthorblockA{
         \blackout{\textit{Technical University of}} \\
         \blackout{\textit{Applied Science Regensburg}} \\
@@ -116,7 +119,7 @@
         \genemail{mailto:dominik.koester@othr.de}{dominik.koester@othr.de}
     }
     \and
-    \IEEEauthorblockN{\blackout{Wolfgang Mauerer}}
+    \IEEEauthorblockN{\blackout{Wolfgang Mauerer\orcidlink{0000-0002-9765-8313}}}
     \IEEEauthorblockA{
         \blackout{\textit{Technical University of}} \\
         \blackout{\textit{Applied Science Regensburg}} \\
@@ -191,14 +194,14 @@ Suppose that for every amplified scale factor, the expectation value collapses t
 For $\{1,3,5\}$, this leads to a closed-form function of the \emph{single} noisy value $E(\lambda_1)$: $\hat{E}(0)=\tfrac{15}{8}E(\lambda_1)-\tfrac{7}{8}f$. For high qubit counts, $f$ collapses to near zero, and three observations follow: (1) the extrapolation is independent of the noise amplification method and yields the same $\hat{E}(0)$; (2) since $c_1>1$, any $E(\lambda_1)$ is rescaled upward, resulting in an apparent improvement that can overshoot the ideal value; and (3) the apparent improvement persists even for a non-functional amplification method, making it indistinguishable from a genuine improvement without further diagnostics. The argument is not specific to Richardson or scale factors $\{1,3,5\}$: Any linear extrapolator with $c_1>1$ collapses to the same single-point rescaling once $E(\lambda{>}1)$ reaches the floor.
 
 \paragraph{Empirical confirmation on hardware}
-\Cref{eq:deterministic} is not merely a worst case: it is reached by ordinary, faithful folding on real hardware. We measure the parity observable $\langle Z^{\otimes 4}\rangle$ (floor $f=0$) of a 4-qubit \gls{qtc} on a connected, low-error chain of the 54-qubit IQM Euro-Q-Exa machine, using the scale factors $\{1,3,5\}$ folding throughout (protocol in \Cref{sec:hardware}), while increasing the Trotter depth $d$. \Cref{fig:rescaling}(a) shows the amplified values $E(\lambda{>}1)$ collapsing to the floor as $d$ grows. \Cref{fig:rescaling}(b) compares, at each depth, the Richardson estimate $\hat{E}(0)$ with the rescaling prediction $\tfrac{15}{8}E(\lambda_1)$ and with $E_\text{ideal}$. At $d{=}1$ the signal is retained ($E(\lambda_3){=}0.46$), the two predictions differ markedly, and Richardson recovers the ideal value. At $d{=}3,5$ the amplified values have reached the floor and $\hat{E}(0)$ tracks the pure rescaling to within $5\%$, decoupled from the truth: at $d{=}3$ it overshoots the ideal by $21\%$ ($\hat{E}{=}1.16$ against $E_\text{ideal}{=}0.96$), at $d{=}5$ it merely happens to fall below. The number of negative extrapolated per-state estimates (see \Cref{sec:diagnostic}) grows in lockstep, from $3/16$ to $7/16$.
+\Cref{eq:deterministic} is not merely a worst case: it is reached by ordinary, faithful folding on real hardware. We measure the parity observable $\langle Z^{\otimes 4}\rangle$ (floor $f=0$) of a 4-qubit \gls{qtc} on a connected, low-error chain of the 54-qubit IQM Euro-Q-Exa machine, using the scale factors $\{1,3,5\}$ folding throughout (protocol in \Cref{sec:hardware}), while increasing the Trotter depth $d$. The left-hand panel of \Cref{fig:rescaling} shows the amplified values $E(\lambda{>}1)$ collapsing to the floor as $d$ grows. The right-hand panel compares, at each depth, the Richardson estimate $\hat{E}(0)$ with the rescaling prediction $\tfrac{15}{8}E(\lambda_1)$ and with $E_\text{ideal}$. At $d{=}1$ the signal is retained ($E(\lambda_3){=}0.46$), the two predictions differ markedly, and Richardson recovers the ideal value. At $d{=}3,5$ the amplified values have reached the floor and $\hat{E}(0)$ tracks the pure rescaling to within $5\%$, decoupled from the truth: at $d{=}3$ it overshoots the ideal by $21\%$ ($\hat{E}{=}1.16$ against $E_\text{ideal}{=}0.96$), at $d{=}5$ it merely happens to fall below. The number of negative extrapolated per-state estimates (see \Cref{sec:diagnostic}) grows in lockstep, from $3/16$ to $7/16$.
 
 \begin{figure}[htbp]
   \centering
   \includetikz{rescaling_collapse}
-  \caption{Richardson extrapolation on Euro-Q-Exa. (a) The
+  \caption{Richardson extrapolation on Euro-Q-Exa. Left: The
     amplified parity values $E(\lambda)$ of a 4-qubit \gls{qtc} collapse to the
-    floor $f=0$ as the Trotter depth $d$ grows. (b) At each depth, the Richardson
+    floor $f=0$ as the Trotter depth $d$ grows. Right: At each depth, the Richardson
     estimate $\hat{E}(0)$, the rescaling prediction $\tfrac{15}{8}E(\lambda_1)$,
     and $E_\text{ideal}$. Once the signal reaches the floor ($d{=}3,5$),
     $\hat{E}(0)$ tracks the rescaling and is decoupled from the ideal value;
@@ -245,7 +248,7 @@ The grey dotted line in \Cref{fig:horoscope} shows garbage folding on the Grover
 
 \subsection{Two routes to unphysical extrapolation}
 \label{sec:spectrum}
-The degeneration of \Cref{sec:degeneration} is one of two distinct ways Richardson \gls{zne} can turn unphysical, and the two must not be conflated. \emph{(1) Ill-conditioning:} closely spaced scale factors carry a large coefficient sum $\sum|c_i|$, which by the variance bound of \Cref{sec:background} amplifies statistical noise and residual model error into an overshoot even when every $E(\lambda)$ retains signal. This route is well understood and is precisely why the community favours the widely spaced set $\{1,3,5\}$~\cite{giurgica-tiron_digital_2020,majumdar_best_2023,cai_quantum_2023}. Recent work characterises the resulting finite-shot help--harm boundary, at which the excess-variance penalty of the coefficients outweighs the squared-bias improvement~\cite{alfaro_finite-shot_2026}. On the Grover circuit, as $\sum|c_i|$ grows by two orders of magnitude, genuine recovery degrades from faithful at $\{1,3,5\}$ ($\rho_\text{gen}=0.44$, $\sum|c_i|=3.5$) to a sixfold overshoot for the closely spaced Kandala set $\{1,1.1,1.25,1.5\}$~\cite{kandala_error_2019} ($\rho_\text{gen}=6.0$, $\sum|c_i|=681$), despite all $E(\lambda)$ retaining signal. \emph{(2) Signal destruction:} the route studied here is orthogonal, governed by the proximity of $E(\lambda{>}1)$ to the floor, not by $\sum|c_i|$, and therefore strikes even the variance-optimal $\{1,3,5\}$ as soon as depth or hardware noise destroys the signal (see \Cref{fig:rescaling}).
+The degeneration of \Cref{sec:degeneration} is one of two distinct ways Richardson \gls{zne} can turn unphysical, and the two must not be conflated. \emph{(1) Ill-conditioning:} closely spaced scale factors carry a large coefficient sum $\sum|c_i|$, which by the variance bound of \Cref{sec:background} amplifies statistical noise and residual model error into an overshoot even when every $E(\lambda)$ retains signal. This route is well understood and is precisely why the community favours the widely spaced set $\{1,3,5\}$~\cite{giurgica-tiron_digital_2020,majumdar_best_2023,cai_quantum_2023}, whose bias and variance are bounded in closed form by~\cite{mohammadipour_direct_2025}. Recent work characterises the resulting finite-shot help--harm boundary~\cite{alfaro_finite-shot_2026}. On the Grover circuit, as $\sum|c_i|$ grows by two orders of magnitude, genuine recovery degrades from faithful at $\{1,3,5\}$ ($\rho_\text{gen}=0.44$, $\sum|c_i|=3.5$) to a sixfold overshoot for the closely spaced Kandala set $\{1,1.1,1.25,1.5\}$~\cite{kandala_error_2019} ($\rho_\text{gen}=6.0$, $\sum|c_i|=681$). \emph{(2) Signal destruction:} the route studied here is orthogonal, governed by the proximity of $E(\lambda{>}1)$ to the floor, not by $\sum|c_i|$, and therefore strikes even the variance-optimal $\{1,3,5\}$ as soon as depth or hardware noise destroys the signal (see \Cref{fig:rescaling}).
 
 \subsection{Hardware}
 \label{sec:hardware}

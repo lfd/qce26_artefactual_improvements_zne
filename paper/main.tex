@@ -45,6 +45,7 @@
 \ifbool{anonymous}{\newcommand{\genemail}[2]{\href{mailto:xxx.xxx@xx.xx}{\blackout{#2}}}}{\newcommand{\genemail}[2]{\href{#1}{#2}}}
 
 \newcommand{\repro}{\href{https://github.com/lfd/qce26_artefactual_improvements_zne}{reproduction package\xspace}}
+\newcommand{\zenodo}{\href{https://doi.org/10.5281/zenodo.21540565}{Zenodo archive\xspace}}
 
 \newcommand{\yes}{\checkmark}
 \newcommand{\partiall}{$\triangle$}
@@ -270,14 +271,14 @@ From this we distil a reporting checklist that any Richardson \gls{zne} benchmar
 \begin{enumerate}[label=(\arabic*),noitemsep,topsep=2pt,leftmargin=1.8em]
   \item report whether $E(\lambda)$ still retains signal at $\lambda>1$ or has reached the observable floor;
   \item report the per-basis-state negative-probability weight $W_\text{neg}$ alongside $\hat{E}(0)$, not the scalar estimate alone;
-  \item report improvement relative to the physically attainable maximum (\eg, $\hat{E}(0)\le0.98$ for our \gls{qtc}), and flag overshoots; where the ideal value is unknown, bound it with a classically simulable surrogate and flag any $\hat{E}(0)$ exceeding the bound.
+  \item report improvement relative to the physically attainable maximum, and flag overshoots; where the ideal value is unknown, bound it with a classically simulable surrogate and flag any $\hat{E}(0)$ exceeding the bound.
 \end{enumerate}
 A failure of any item marks the reported improvement as an artefact rather than genuine mitigation. Paired with the matched-cost garbage-folding negative control~--~which a benchmark suite can run as a routine sanity check~--~these items separate what a \gls{zne} pipeline claims to measure from what it actually measures.
 
 
 
 \begin{small}
-\textbf{Data availability} Code and data to generate the complete paper are available in our \repro{}. HW calibration snapshots and logs allow reproduction without machine access.
+\textbf{Data availability} Code and data to generate the complete paper are available in our \repro{} and a long-term \zenodo{}. HW calibration snapshots and logs allow reproduction without machine access.
 
 \textbf{Acknowledgments}
 The authors gratefully acknowledge the use of the quantum system Euro-Q-Exa, co-funded by the EuroHPC JU, BMFTR (grant 13N16690), and the Bavarian State Ministry of Science and the Arts, operated by the Leibniz Supercomputing Centre (LRZ) in Garching, Germany, for providing the computational resources for this work. We acknowledge partial support by the German Research Foundation (DFG), grant MA 9739/1-1, and the High-Tech Agenda of the Free State of Bavaria. We also acknowledge partial support by the European Regional Development Fund (ERDF) and by the Free State of Bavaria as part of the project AIM-SMEs (Grant No. 2506-014-3.2), co-funded by the European Union. 
